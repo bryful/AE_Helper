@@ -1,0 +1,12 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="aeVersion/aeVersion.vcxproj" Id="30ee6675-5e9e-4440-afca-dee5f4ae663d" />
+  <Project Path="outflags/outflags.vcxproj" Id="a69c0821-5ef0-45a5-a53c-9b44936c1562" />
+  <Project Path="projectDup/projectDup.vcxproj" Id="97d381ef-0392-4c69-bd80-1a9ab4ab059f" />
+  <Project Path="renPrj/renPrj.vcxproj" Id="83d01c9e-3338-4731-b10a-26e8322fc142" />
+  <Project Path="TTF2Cpp/TTF2Cpp.csproj" />
+</Solution>
