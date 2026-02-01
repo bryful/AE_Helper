@@ -28,70 +28,68 @@ using (var typeface = SKTypeface.FromFile(fontPath))
 			bmpCanvas.Clear(SKColors.Black);
 
 
-			using (var paint = new SKPaint())
+			using (var font = new SKFont(typeface, height))
 			{
-				paint.Typeface = typeface;
-				paint.TextSize = height;
-				paint.Color = SKColors.White;
-				paint.IsAntialias = false;
-				paint.SubpixelText = false;
-				paint.LcdRenderText = false;
+				font.Subpixel = false;
+				font.Edging = SKFontEdging.Alias;
 
-				using (var surface = SKSurface.Create(new SKImageInfo(width, height, SKColorType.Rgba8888, SKAlphaType.Premul)))
+				using (var paint = new SKPaint())
 				{
-					var canvas = surface.Canvas;
-
-					// ASCII 0x21 (!) から 0x7E (~) まで
-					for (int c = 0x21; c <= 0x7E; c++)
+					paint.Color = SKColors.White;
+					paint.IsAntialias = false;
+					font.GetFontMetrics(out var metrics);
+					float baseline = -metrics.Ascent; // 文字の上端からの適切な位置
+					using (var surface = SKSurface.Create(new SKImageInfo(width, height, SKColorType.Rgba8888, SKAlphaType.Premul)))
 					{
-						char character = (char)c;
+						var canvas = surface.Canvas;
 
-						canvas.Clear(SKColors.Black);
-						// フォントによっては描画位置の微調整が必要
-						canvas.DrawText(character.ToString(), 0, 19, paint);
-
-						int ix = (c - 0x21) % 16;
-						int iy = (c - 0x21) / 16;
-
-						// surfaceのスナップショットをbmpCanvasに描画
-						using (var image = surface.Snapshot())
+						// ASCII 0x21 (!) から 0x7E (~) まで
+						for (int c = 0x21; c <= 0x7E; c++)
 						{
-							bmpCanvas.DrawImage(image, ix * width, iy * height);
+							char character = (char)c;
 
-							using (var pixmap = image.PeekPixels())
+							canvas.Clear(SKColors.Black);
+							// フォントによっては描画位置の微調整が必要
+							canvas.DrawText(character.ToString(), 0, 19, SKTextAlign.Left, font, paint);
+							canvas.DrawText(character.ToString(), 0, baseline, SKTextAlign.Left, font, paint);
+							int ix = (c - 0x21) % 16;
+							int iy = (c - 0x21) / 16;
+
+							// surfaceのスナップショットをbmpCanvasに描画
+							using (var image = surface.Snapshot())
 							{
-								cppArray.Append("    { ");
-								for (int y = 0; y < height; y++)
+								bmpCanvas.DrawImage(image, ix * width, iy * height);
+
+								using (var pixmap = image.PeekPixels())
 								{
-									ushort rowByte = 0;
-									for (int x = 0; x < width; x++)
+									cppArray.Append("    { ");
+									for (int y = 0; y < height; y++)
 									{
-										// 輝度が一定以上のピクセルを「1」とする
-										SKColor pixel = pixmap.GetPixelColor(x, y);
-										if (pixel.Red > 128)
+										ushort rowByte = 0;
+										for (int x = 0; x < width; x++)
 										{
-											rowByte |= (ushort)(0x8000 >> x);
+											// 輝度が一定以上のピクセルを「1」とする
+											SKColor pixel = pixmap.GetPixelColor(x, y);
+											if (pixel.Red > 128)
+											{
+												rowByte |= (ushort)(0x8000 >> x);
+											}
 										}
+										cppArray.Append($"0x{rowByte:X4}");
+										if (y < height - 1) cppArray.Append(", ");
 									}
-									cppArray.Append($"0x{rowByte:X4}");
-									if (y < height - 1) cppArray.Append(", ");
+									cppArray.AppendLine($" }}, // {character}");
 								}
-								cppArray.AppendLine($" }}, // {character}");
 							}
+
 						}
-						for (int i = 0; i < bmp.Height/height; i++)
+						// グリッド描画は最後に一回だけ行う
+						using (var gridPaint = new SKPaint { Color = SKColors.DarkGray, StrokeWidth = 1 })
 						{
-							bmpCanvas.DrawLine(
-								0, i * height,
-								bmp.Width, i * height,
-								new SKPaint { Color = SKColors.DarkGray, StrokeWidth = 1 });
-						}
-						for (int i = 0; i < bmp.Width / width; i++)
-						{
-							bmpCanvas.DrawLine(
-								i*width, 0,
-								i * width, bmp.Height,
-								new SKPaint { Color = SKColors.DarkGray, StrokeWidth = 1 });
+							for (int i = 0; i <= bmp.Height / height; i++)
+								bmpCanvas.DrawLine(0, i * height, bmp.Width, i * height, gridPaint);
+							for (int i = 0; i <= bmp.Width / width; i++)
+								bmpCanvas.DrawLine(i * width, 0, i * width, bmp.Height, gridPaint);
 						}
 					}
 				}

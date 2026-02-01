@@ -3,9 +3,11 @@
 #include <string>
 #include <vector>
 #include <filesystem>
+#include <algorithm>
 #include <windows.h>
 #include <io.h>
 #include <fcntl.h>
+#include <sstream>
 #include "json.hpp"
 
 using json = nlohmann::json;
@@ -51,6 +53,36 @@ private:
         return flags;
     }
 
+    std::vector<std::string> SplitByMaruten(const std::string& text) {
+        std::vector<std::string> result;
+        // UTF-8の「。」のバイト列: 0xE3 0x80 0x82
+        const char maruten[] = {'\xE3', '\x80', '\x82', '\0'};
+        const size_t marutenLen = 3;
+        
+        size_t start = 0;
+        size_t pos = 0;
+        
+        while ((pos = text.find(maruten, start)) != std::string::npos) {
+            // 「。」を含めて切り出す
+            std::string segment = text.substr(start, pos - start + marutenLen);
+            if (!segment.empty()) {
+                result.push_back(segment);
+            }
+            start = pos + marutenLen;
+        }
+        
+        // 残りの部分を追加
+        if (start < text.length()) {
+            std::string remaining = text.substr(start);
+            // 空白のみの文字列でなければ追加
+            if (!remaining.empty() && remaining.find_first_not_of(" \t\r\n") != std::string::npos) {
+                result.push_back(remaining);
+            }
+        }
+        
+        return result;
+    }
+
     void ExportList(const std::string& key, uint64_t reverseValue = 0, bool useReverse = false) {
         auto flags = ParseFlags(key);
         fs::path fileName = currentDir / (key + ".txt");
@@ -66,15 +98,24 @@ private:
         file.write(reinterpret_cast<const char*>(bom), 3);
 
         for (const auto& flag : flags) {
-            std::string line;
-            // ビットが含まれているか判定
+            // descriptionを「。」で分割
+            auto descLines = SplitByMaruten(flag.description);
+            
             if (useReverse && (reverseValue & flag.value) == flag.value && flag.value != 0) {
-                line = flag.name + "//" + flag.description + "\n";
+                // 有効な行（セミコロンなし）
+                for (const auto& descLine : descLines) {
+                    file << descLine << "\r\n";
+                }
+                file << flag.name << "\r\n";
             }
             else {
-                line = "; " + flag.name + "//" + flag.description + "\n";
+                // 無効な行（セミコロンあり）
+                for (const auto& descLine : descLines) {
+                    file << "; " << descLine << "\r\n";
+                }
+                file << "; " << flag.name << "\r\n";
             }
-            file.write(line.c_str(), line.size());
+            file << "\r\n";  // 各フラグブロックの後に空行を追加
         }
 
         file.close();
