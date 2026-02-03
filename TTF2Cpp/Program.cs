@@ -78,7 +78,13 @@ using (var typeface = SKTypeface.FromFile(fontPath))
 										cppArray.Append($"0x{rowByte:X4}");
 										if (y < height - 1) cppArray.Append(", ");
 									}
-									cppArray.AppendLine($" }}, // {character}");
+									string charStr = character.ToString();
+									if (charStr == "\\")
+									{
+										charStr = "";
+									}
+
+									cppArray.AppendLine($" }}, // {charStr}");
 								}
 							}
 
