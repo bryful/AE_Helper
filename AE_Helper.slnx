@@ -5,6 +5,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="aeVersion/aeVersion.vcxproj" Id="30ee6675-5e9e-4440-afca-dee5f4ae663d" />
+  <Project Path="ColorSwitchEdit/ColorSwitchEdit.csproj" Id="eacc57ec-0ad0-40a2-9447-020c69169d9e" />
   <Project Path="gls/gls.vcxproj" Id="d44f3695-0f28-4fa4-951f-d25a0c31ec53" />
   <Project Path="outflags/outflags.vcxproj" Id="a69c0821-5ef0-45a5-a53c-9b44936c1562" />
   <Project Path="outflagsUI/outflagsUI.csproj" Id="1a054187-1c8b-42aa-a622-5d73f86b4e88" />

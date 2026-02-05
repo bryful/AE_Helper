@@ -32,16 +32,16 @@
 			outflagsList1 = new OutflagsList();
 			textBox1 = new TextBox();
 			numericUpDown1 = new NumericUpDown();
-		outflagsSwitcher1 = new OutflagsSwitcher();
-		menuStrip1 = new MenuStrip();
-		fileToolStripMenuItem = new ToolStripMenuItem();
-		quitToolStripMenuItem = new ToolStripMenuItem();
-		editToolStripMenuItem = new ToolStripMenuItem();
-		copyMenu = new ToolStripMenuItem();
-		pasteMenu = new ToolStripMenuItem();
-		toolStripSeparator1 = new ToolStripSeparator();
-		clearAllChecksMenuItem = new ToolStripMenuItem();
-		checkAllMenuItem = new ToolStripMenuItem();
+			outflagsSwitcher1 = new OutflagsSwitcher();
+			menuStrip1 = new MenuStrip();
+			fileToolStripMenuItem = new ToolStripMenuItem();
+			quitToolStripMenuItem = new ToolStripMenuItem();
+			editToolStripMenuItem = new ToolStripMenuItem();
+			copyMenu = new ToolStripMenuItem();
+			pasteMenu = new ToolStripMenuItem();
+			toolStripSeparator1 = new ToolStripSeparator();
+			clearAllChecksMenuItem = new ToolStripMenuItem();
+			checkAllMenuItem = new ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
@@ -52,7 +52,7 @@
 			outflagsList1.DescriptionTextBox = textBox1;
 			outflagsList1.FormattingEnabled = true;
 			outflagsList1.IntegralHeight = false;
-			outflagsList1.Items.AddRange(new object[] { "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY" });
+			outflagsList1.Items.AddRange(new object[] { "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY", "PF_OutFlag_KEEP_RESOURCE_OPEN", "PF_OutFlag_WIDE_TIME_INPUT", "PF_OutFlag_NON_PARAM_VARY", "PF_OutFlag_RESERVED6", "PF_OutFlag_SEQUENCE_DATA_NEEDS_FLATTENING", "PF_OutFlag_I_DO_DIALOG", "PF_OutFlag_USE_OUTPUT_EXTENT", "PF_OutFlag_SEND_DO_DIALOG", "PF_OutFlag_DISPLAY_ERROR_MESSAGE", "PF_OutFlag_I_EXPAND_BUFFER", "PF_OutFlag_PIX_INDEPENDENT", "PF_OutFlag_I_WRITE_INPUT_BUFFER", "PF_OutFlag_I_SHRINK_BUFFER", "PF_OutFlag_WORKS_IN_PLACE", "PF_OutFlag_RESERVED8", "PF_OutFlag_CUSTOM_UI", "PF_OutFlag_RESERVED7", "PF_OutFlag_REFRESH_UI", "PF_OutFlag_NOP_RENDER", "PF_OutFlag_I_USE_SHUTTER_ANGLE", "PF_OutFlag_I_USE_AUDIO", "PF_OutFlag_I_AM_OBSOLETE", "PF_OutFlag_FORCE_RERENDER", "PF_OutFlag_PiPL_OVERRIDES_OUTDATA_OUTFLAGS", "PF_OutFlag_I_HAVE_EXTERNAL_DEPENDENCIES", "PF_OutFlag_DEEP_COLOR_AWARE", "PF_OutFlag_SEND_UPDATE_PARAMS_UI", "PF_OutFlag_AUDIO_FLOAT_ONLY", "PF_OutFlag_AUDIO_IIR", "PF_OutFlag_I_SYNTHESIZE_AUDIO", "PF_OutFlag_AUDIO_EFFECT_TOO", "PF_OutFlag_AUDIO_EFFECT_ONLY" });
 			outflagsList1.Location = new Point(12, 74);
 			outflagsList1.Name = "outflagsList1";
 			outflagsList1.Size = new Size(385, 395);
@@ -110,47 +110,47 @@
 			quitToolStripMenuItem.Size = new Size(139, 22);
 			quitToolStripMenuItem.Text = "Quit";
 			// 
-		// editToolStripMenuItem
-		// 
-		editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { copyMenu, pasteMenu, toolStripSeparator1, clearAllChecksMenuItem, checkAllMenuItem });
-		editToolStripMenuItem.Name = "editToolStripMenuItem";
-		editToolStripMenuItem.Size = new Size(39, 20);
-		editToolStripMenuItem.Text = "Edit";
-		// 
-		// copyMenu
-		// 
-		copyMenu.Name = "copyMenu";
-		copyMenu.ShortcutKeys = Keys.Control | Keys.C;
-		copyMenu.Size = new Size(230, 22);
-		copyMenu.Text = "Copy";
-		// 
-		// pasteMenu
-		// 
-		pasteMenu.Name = "pasteMenu";
-		pasteMenu.ShortcutKeys = Keys.Control | Keys.V;
-		pasteMenu.Size = new Size(230, 22);
-		pasteMenu.Text = "Paste";
-		// 
-		// toolStripSeparator1
-		// 
-		toolStripSeparator1.Name = "toolStripSeparator1";
-		toolStripSeparator1.Size = new Size(227, 6);
-		// 
-		// clearAllChecksMenuItem
-		// 
-		clearAllChecksMenuItem.Name = "clearAllChecksMenuItem";
-		clearAllChecksMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.C;
-		clearAllChecksMenuItem.Size = new Size(230, 22);
-		clearAllChecksMenuItem.Text = "Clear All Checks";
-		clearAllChecksMenuItem.Click += ClearAllChecksMenuItem_Click;
-		// 
-		// checkAllMenuItem
-		// 
-		checkAllMenuItem.Name = "checkAllMenuItem";
-		checkAllMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.A;
-		checkAllMenuItem.Size = new Size(230, 22);
-		checkAllMenuItem.Text = "Check All";
-		checkAllMenuItem.Click += CheckAllMenuItem_Click;
+			// editToolStripMenuItem
+			// 
+			editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { copyMenu, pasteMenu, toolStripSeparator1, clearAllChecksMenuItem, checkAllMenuItem });
+			editToolStripMenuItem.Name = "editToolStripMenuItem";
+			editToolStripMenuItem.Size = new Size(39, 20);
+			editToolStripMenuItem.Text = "Edit";
+			// 
+			// copyMenu
+			// 
+			copyMenu.Name = "copyMenu";
+			copyMenu.ShortcutKeys = Keys.Control | Keys.C;
+			copyMenu.Size = new Size(229, 22);
+			copyMenu.Text = "Copy";
+			// 
+			// pasteMenu
+			// 
+			pasteMenu.Name = "pasteMenu";
+			pasteMenu.ShortcutKeys = Keys.Control | Keys.V;
+			pasteMenu.Size = new Size(229, 22);
+			pasteMenu.Text = "Paste";
+			// 
+			// toolStripSeparator1
+			// 
+			toolStripSeparator1.Name = "toolStripSeparator1";
+			toolStripSeparator1.Size = new Size(226, 6);
+			// 
+			// clearAllChecksMenuItem
+			// 
+			clearAllChecksMenuItem.Name = "clearAllChecksMenuItem";
+			clearAllChecksMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.C;
+			clearAllChecksMenuItem.Size = new Size(229, 22);
+			clearAllChecksMenuItem.Text = "Clear All Checks";
+			clearAllChecksMenuItem.Click += ClearAllChecksMenuItem_Click;
+			// 
+			// checkAllMenuItem
+			// 
+			checkAllMenuItem.Name = "checkAllMenuItem";
+			checkAllMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.A;
+			checkAllMenuItem.Size = new Size(229, 22);
+			checkAllMenuItem.Text = "Check All";
+			checkAllMenuItem.Click += CheckAllMenuItem_Click;
 			// 
 			// Form1
 			// 
@@ -173,9 +173,9 @@
 			PerformLayout();
 		}
 
-	#endregion
+		#endregion
 
-	private OutflagsList outflagsList1;
+		private OutflagsList outflagsList1;
 	private NumericUpDown numericUpDown1;
 	private TextBox textBox1;
 	private OutflagsSwitcher outflagsSwitcher1;
