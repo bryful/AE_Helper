@@ -11,5 +11,6 @@
   <Project Path="outflagsUI/outflagsUI.csproj" Id="1a054187-1c8b-42aa-a622-5d73f86b4e88" />
   <Project Path="projectDup/projectDup.vcxproj" Id="97d381ef-0392-4c69-bd80-1a9ab4ab059f" />
   <Project Path="renPrj/renPrj.vcxproj" Id="83d01c9e-3338-4731-b10a-26e8322fc142" />
+  <Project Path="spatConv/spatConv.vcxproj" Id="6c5f53d4-2266-4d78-b059-44dd1bc02f3c" />
   <Project Path="TTF2Cpp/TTF2Cpp.csproj" />
 </Solution>
