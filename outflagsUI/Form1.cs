@@ -34,27 +34,34 @@ namespace outflagsUI
 			};
 		}
 
-		private void Form1_Load(object? sender, EventArgs e)
+	private void Form1_Load(object? sender, EventArgs e)
+	{
+		// フォームの位置とサイズを復元
+		settings.ApplyToForm(this);
+
+		// OutflagsSwitcherとOutflagsListを接続（重要！）
+		if (outflagsSwitcher1 != null && outflagsList1 != null)
 		{
-			// フォームの位置とサイズを復元
-			settings.ApplyToForm(this);
-
-			// OutflagsListTypeを復元
-			if (outflagsSwitcher1 != null)
-			{
-				outflagsSwitcher1.CurrentType = settings.ActiveType;
-			}
-
-			// FlagsValuesを復元
-			if (outflagsList1 != null)
-			{
-				outflagsList1.FlagsValues = new ulong[] 
-				{ 
-					settings.OutFlags1Value, 
-					settings.OutFlags2Value 
-				};
-			}
+			outflagsSwitcher1.SyncedOutflagsList = outflagsList1;
+			System.Diagnostics.Debug.WriteLine("Form1_Load: SyncedOutflagsList connected");
 		}
+
+		// OutflagsListTypeを復元
+		if (outflagsSwitcher1 != null)
+		{
+			outflagsSwitcher1.CurrentType = settings.ActiveType;
+		}
+
+		// FlagsValuesを復元
+		if (outflagsList1 != null)
+		{
+			outflagsList1.FlagsValues = new ulong[] 
+			{ 
+				settings.OutFlags1Value, 
+				settings.OutFlags2Value 
+			};
+		}
+	}
 
 		private void Form1_FormClosing(object? sender, FormClosingEventArgs e)
 		{

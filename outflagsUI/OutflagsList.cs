@@ -383,13 +383,16 @@ namespace outflagsUI
 			get { return m_flagType; }
 			set
 			{
+				System.Diagnostics.Debug.WriteLine($"OutflagsList: FlagType setter called with {value} (current: {m_flagType})");
 				m_flagType = value;
 				if (m_flagType == OutflagsListType.OutFlags1)
 				{
+					System.Diagnostics.Debug.WriteLine("OutflagsList: Setting OutFlags1");
 					SetOutFlags(manager.GetOutFlags1());
 				}
 				else
 				{
+					System.Diagnostics.Debug.WriteLine("OutflagsList: Setting OutFlags2");
 					SetOutFlags(manager.GetOutFlags2());
 				}
 				ApplyFlagsValue(); // フラグタイプ変更時にも反映

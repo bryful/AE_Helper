@@ -26,10 +26,12 @@ namespace outflagsUI
 			set
 			{
 				m_outflagsList = value;
+				System.Diagnostics.Debug.WriteLine($"OutflagsSwitcher: SyncedOutflagsList set to {(value != null ? "non-null" : "null")}");
 				if (m_outflagsList != null)
 				{
 					// 現在のタイプをOutflagsListに反映
 					m_outflagsList.FlagType = m_currentType;
+					System.Diagnostics.Debug.WriteLine($"OutflagsSwitcher: Set FlagType to {m_currentType}");
 				}
 			}
 		}
@@ -117,15 +119,17 @@ namespace outflagsUI
 			ResumeLayout(false);
 		}
 
-		private void BtnOutFlags1_Click(object? sender, EventArgs e)
-		{
-			CurrentType = OutflagsListType.OutFlags1;
-		}
+	private void BtnOutFlags1_Click(object? sender, EventArgs e)
+	{
+		System.Diagnostics.Debug.WriteLine("BtnOutFlags1_Click called");
+		CurrentType = OutflagsListType.OutFlags1;
+	}
 
-		private void BtnOutFlags2_Click(object? sender, EventArgs e)
-		{
-			CurrentType = OutflagsListType.OutFlags2;
-		}
+	private void BtnOutFlags2_Click(object? sender, EventArgs e)
+	{
+		System.Diagnostics.Debug.WriteLine("BtnOutFlags2_Click called");
+		CurrentType = OutflagsListType.OutFlags2;
+	}
 
 		/// <summary>
 		/// ボタンの表示状態を更新（押された状態を表現）
