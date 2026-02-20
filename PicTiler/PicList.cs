@@ -411,7 +411,12 @@ namespace PicTiler
 					// 形式に応じて保存
 					if (isTga)
 					{
-						resultImage.SaveAsTga(name);
+						var tgaEncoder = new SixLabors.ImageSharp.Formats.Tga.TgaEncoder
+						{
+							BitsPerPixel = SixLabors.ImageSharp.Formats.Tga.TgaBitsPerPixel.Pixel32,
+							Compression = SixLabors.ImageSharp.Formats.Tga.TgaCompression.None
+						};
+						resultImage.SaveAsTga(name, tgaEncoder);
 					}
 					else // isPng
 					{
