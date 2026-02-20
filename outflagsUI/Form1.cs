@@ -15,13 +15,13 @@ namespace outflagsUI
 			this.Load += Form1_Load;
 			this.FormClosing += Form1_FormClosing;
 
-			copyMenu.Click+=(s, e) =>
+		copyMenu.Click+=(s, e) =>
+		{
+			if (outflagsList1 != null)
 			{
-				if (outflagsList1 != null)
-				{
-					Clipboard.SetText($"{outflagsList1.FlagsValue}");
-				}
-			};
+				Clipboard.SetText(outflagsList1.ToCode());
+			}
+		};
 			pasteMenu.Click += (s, e) =>
 			{
 				if (outflagsList1 != null)

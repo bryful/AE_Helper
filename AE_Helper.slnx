@@ -11,6 +11,7 @@
   <Project Path="Organize-Aex/Organize-Aex.vcxproj" Id="8fc1e724-3bec-4a71-a985-fde6cbc20b60" />
   <Project Path="outflags/outflags.vcxproj" Id="a69c0821-5ef0-45a5-a53c-9b44936c1562" />
   <Project Path="outflagsUI/outflagsUI.csproj" Id="1a054187-1c8b-42aa-a622-5d73f86b4e88" />
+  <Project Path="PicTiler/PicTiler.csproj" />
   <Project Path="projectDup/projectDup.vcxproj" Id="97d381ef-0392-4c69-bd80-1a9ab4ab059f" />
   <Project Path="renPrj/renPrj.vcxproj" Id="83d01c9e-3338-4731-b10a-26e8322fc142" />
   <Project Path="spatConv/spatConv.vcxproj" Id="6c5f53d4-2266-4d78-b059-44dd1bc02f3c" />

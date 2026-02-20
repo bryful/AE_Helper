@@ -494,6 +494,67 @@ namespace outflagsUI
 			isUpdatingChecks = false;
 		}
 	}
+
+	/// <summary>
+	/// チェックされているフラグをC++コード形式で出力
+	/// </summary>
+	public string ToCode()
+	{
+		var checkedFlags = new List<string>();
+		
+		// チェックされているフラグの名前を収集
+		for (int i = 0; i < this.Items.Count; i++)
+		{
+			if (this.GetItemChecked(i))
+			{
+				string flagName = this.Items[i].ToString() ?? string.Empty;
+				if (!string.IsNullOrEmpty(flagName))
+				{
+					checkedFlags.Add(flagName);
+				}
+			}
+		}
+
+		// フラグがチェックされていない場合
+		if (checkedFlags.Count == 0)
+		{
+			return m_flagType == OutflagsListType.OutFlags1 
+				? "out_data->out_flags = 0;\r\n\r\n#define NF_OUT_FLAGS 0"
+				: "out_data->out_flags2 = 0;\r\n\r\n#define NF_OUT_FLAGS2 0";
+		}
+
+		// フラグタイプに応じた変数名とdefine名
+		string varName = m_flagType == OutflagsListType.OutFlags1 ? "out_data->out_flags" : "out_data->out_flags2";
+		string defineName = m_flagType == OutflagsListType.OutFlags1 ? "NF_OUT_FLAGS" : "NF_OUT_FLAGS2";
+		
+		// フラグ値を取得
+		ulong flagValue = m_flagType == OutflagsListType.OutFlags1 ? m_flagsValues[0] : m_flagsValues[1];
+
+		// コード生成
+		var codeBuilder = new System.Text.StringBuilder();
+		codeBuilder.AppendLine($"{varName} =");
+		
+		for (int i = 0; i < checkedFlags.Count; i++)
+		{
+			if (i == checkedFlags.Count - 1)
+			{
+				// 最後のフラグ（;で終わる）
+				codeBuilder.AppendLine($"{checkedFlags[i]};");
+			}
+			else
+			{
+				// 途中のフラグ（|で連結）
+				codeBuilder.AppendLine($"{checkedFlags[i]}");
+				codeBuilder.Append("|");
+			}
+		}
+
+		// #defineを追加
+		codeBuilder.AppendLine();
+		codeBuilder.Append($"#define {defineName} {flagValue}");
+
+		return codeBuilder.ToString();
+	}
 }
 
 	// カスタムイベント引数クラス
