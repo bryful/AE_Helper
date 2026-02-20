@@ -86,7 +86,7 @@ namespace PicTiler
 			bool result = false;
 			using (SaveFileDialog sfd = new SaveFileDialog())
 			{
-				sfd.Filter = "PNG Image|*.png|BMP Image|*.bmp|JPEG Image|*.jpg;*.jpeg";
+				sfd.Filter = "PNG Image|*.png|Targa Image|*.tga";
 				if (sfd.ShowDialog() != DialogResult.OK)
 					return false;
 				result = true;

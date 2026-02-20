@@ -325,12 +325,12 @@ namespace PicTiler
 		}
 
 		/// <summary>
-		/// リストに登録された画像をグリッド状に配置したPNGファイルを生成
+		/// リストに登録された画像をグリッド状に配置した画像ファイルを生成
 		/// </summary>
 		/// <param name="sz">各画像のサイズ（縦横同じ）</param>
 		/// <param name="w">横に並べる個数</param>
 		/// <param name="h">縦に並べる個数</param>
-		/// <param name="name">保存するファイルパス</param>
+		/// <param name="name">保存するファイルパス（拡張子で形式を判定: .png, .tga）</param>
 		/// <returns>成功した場合true</returns>
 		public bool ExportGridImage(int sz, int w, int h, string name)
 		{
@@ -361,6 +361,18 @@ namespace PicTiler
 				int gridWidth = sz * w;
 				int gridHeight = sz * h;
 				
+				// 拡張子から保存形式を判定
+				string extension = Path.GetExtension(name).ToLower();
+				bool isTga = (extension == ".tga");
+				bool isPng = (extension == ".png");
+
+				if (!isTga && !isPng)
+				{
+					MessageBox.Show("サポートされていない形式です。\n.png または .tga を指定してください。", 
+						"エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return false;
+				}
+
 				// 結果画像を作成（透明背景）
 				using (var resultImage = new Image<Rgba32>(gridWidth, gridHeight))
 				{
@@ -396,8 +408,15 @@ namespace PicTiler
 						Directory.CreateDirectory(directory);
 					}
 
-					// PNG形式で保存
-					resultImage.SaveAsPng(name);
+					// 形式に応じて保存
+					if (isTga)
+					{
+						resultImage.SaveAsTga(name);
+					}
+					else // isPng
+					{
+						resultImage.SaveAsPng(name);
+					}
 				}
 
 				return true;
@@ -411,4 +430,5 @@ namespace PicTiler
 		}
 	}
 }
+
 
