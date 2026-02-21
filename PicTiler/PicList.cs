@@ -320,7 +320,31 @@ namespace PicTiler
 			});
 
 			sourceImage.Dispose();
+			for(int y = 0;y< resultImage.Height;y++)
+			{
+				for(int x = 0;x< resultImage.Width;x++)
+				{
+					var pixel = resultImage[x, y];
+					if (pixel.A == 0)
+					{
+						resultImage[x, y] = new Rgba32(0, 0, 0, 255);
+					}
+					else if (pixel.A == 255)
+					{
+						//resultImage[x, y] = pixel;
+					}
+					else
+					{
+						float r = ((float)pixel.R * (float)pixel.A / 255);
+						float g = ((float)pixel.G * (float)pixel.A / 255);
+						float b = ((float)pixel.B * (float)pixel.A / 255);
+						float v = (0.299f * r + 0.587f * g + 0.114f * b);
+						if(v>255) v = 255;
+						resultImage[x, y] = new Rgba32((byte)v, (byte)v, (byte)v, 255);
+					}
+				}
 
+			}
 			return resultImage;
 		}
 
@@ -413,8 +437,8 @@ namespace PicTiler
 					{
 						var tgaEncoder = new SixLabors.ImageSharp.Formats.Tga.TgaEncoder
 						{
-							BitsPerPixel = SixLabors.ImageSharp.Formats.Tga.TgaBitsPerPixel.Pixel32,
-							Compression = SixLabors.ImageSharp.Formats.Tga.TgaCompression.None
+							BitsPerPixel = SixLabors.ImageSharp.Formats.Tga.TgaBitsPerPixel.Pixel24,
+							Compression = SixLabors.ImageSharp.Formats.Tga.TgaCompression.RunLength,
 						};
 						resultImage.SaveAsTga(name, tgaEncoder);
 					}
